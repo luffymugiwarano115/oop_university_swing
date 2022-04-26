@@ -11,6 +11,7 @@ public class Student extends AbstractId {
     private String firstName;
     private String lastName;
     private float grade;
+    private String facultyNumber;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Group group;
@@ -18,10 +19,11 @@ public class Student extends AbstractId {
     public Student() {
     }
 
-    public Student(String firstName, String lastName, float grade, Group group) {
+    public Student(String firstName, String lastName, float grade, String facultyNumber, Group group) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.grade = grade;
+        this.facultyNumber = facultyNumber;
         this.group = group;
     }
 
